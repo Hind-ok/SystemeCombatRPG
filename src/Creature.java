@@ -46,6 +46,12 @@ public abstract class Creature {
         }
     }
 
+    //j ai add ce methode pour resoudre le probleme de reinitialisation
+    public void reinitialiserCompletement() {
+        this.hp = hpMax;
+        this.mana = manaMax;
+    }
+
     public String getNom() {
         return nom;
     }
@@ -58,12 +64,6 @@ public abstract class Creature {
         return mana;
     }
 
-    public int getDegatsBase() {
-        return degatsBase;
-    }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 
 }
