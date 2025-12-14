@@ -117,7 +117,6 @@ public class Arena {
 
     public void resetCreature(int a) {
         if (a >= 0 && a < index) {
-            //creatures[a].rest();
             creatures[a].reinitialiserCompletement();
             System.out.println(creatures[a].getNom() + " a été réinitialisé.");
         } else {
