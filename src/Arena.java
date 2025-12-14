@@ -10,15 +10,15 @@ public class Arena {
 
     // ajoute une créature si l’arène n’est pas pleine.
     public boolean ajouterCreature(Creature c) {
-        if (index < creatures.length) {
-            creatures[index] = c;
-            index++;
-            System.out.println(c.getNom() + " a été ajouté à l'arène.");
-            return true;
-        } else {
-            System.out.println("Arène pleine.");
+        if (index >= creatures.length) {
+            System.out.println("L'arène est pleine! (" + index + "/" + creatures.length + ")");
             return false;
         }
+
+        creatures[index] = c;
+        index++;
+        System.out.println(c.getNom() + " a été ajouté à l'arène. (" + index + "/" + creatures.length + ")");
+        return true;
     }
 
     // affiche toutes les créatures enregistrées
@@ -28,12 +28,12 @@ public class Arena {
             return;
         }
 
-        System.out.println("\n=== CREATURES DANS L'ARENE ===");
+        System.out.println("\n=== CRÉATURES DANS L'ARÈNE (" + index + "/" + creatures.length + ") ===");
         for (int i = 0; i < index; i++) {
             System.out.print(i + ". ");
             creatures[i].afficherStatut();
         }
-        System.out.println("==============================\n");
+        System.out.println("========================================\n");
     }
 
     //combat tour par tour entre deux créatures.
@@ -128,12 +128,17 @@ public class Arena {
         return index;
     }
 
-    public Creature getCreature(int index) {
-        if (index >= 0 && index < this.index) {
-            return creatures[index];
+    public int getCapacite() {
+        return creatures.length;
+    }
+
+    public Creature getCreature(int i) {
+        if (i >= 0 && i < index) {
+            return creatures[i];
         }
         return null;
     }
+
 
 }
 

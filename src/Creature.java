@@ -36,7 +36,7 @@ public abstract class Creature {
     }
 
     public  void afficherStatut(){
-        System.out.println(nom + "points de vie hp :"+ this.hp + "mana :"+ this.mana);
+        System.out.println(nom + " points de vie hp :"+ this.hp + " mana :"+ this.mana);
     }
 
     public void rest(){
