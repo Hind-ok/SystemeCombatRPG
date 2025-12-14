@@ -8,6 +8,7 @@ public class Archer extends Creature implements Physique{
     private static final int COUT_COUP_PUISSANT = 15;
     private static final double CHANCE_CRITIQUE = 0.3;
     private Random random;
+
     public Archer(String nom) {
         super(nom, HP_MAX, MANA_MAX, DEGATS_BASE);
         this.random = new Random();

@@ -45,4 +45,25 @@ public abstract class Creature {
             this.mana = manaMax;
         }
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public int getDegatsBase() {
+        return degatsBase;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
 }
